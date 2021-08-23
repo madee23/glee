@@ -3,11 +3,12 @@ body {
  font-size: 16px;
  line-height: 26px;
  background-color: rgb(189, 189, 189);
- // @extend %quicksand-500;
+ @extend %DMSans-400;
 }
 
 .container {
- width: 1170px;
+ width: 1770px;
  margin: 0 auto;
  padding: 0 15px;
+ // border: 1px solid #000;
 }

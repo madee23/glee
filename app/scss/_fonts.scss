@@ -1,22 +1,22 @@
 @font-face {
-  font-family: 'Quicksand-Medium';
+  font-family: 'DMSans-Regular';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('DMSans-Regular'),
+    url('../fonts/DMSans-Regular.woff2') format('woff2'),
+    url('../fonts/DMSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Rubik-Medium';
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: local('Quicksand-Medium'),
-    url('../fonts/Quicksand-Medium.woff2') format('woff2'),
-    url('../fonts/Quicksand-Medium.woff') format('woff');
+  src: local('Rubik-Medium'),
+    url('../fonts/Rubik-Medium.woff2') format('woff2'),
+    url('../fonts/Rubik-Medium.woff') format('woff');
 }
-
-// @font-face {
-//   font-family: 'Quicksand-Regular';
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-//   src: local('Quicksand-Regular'),
-//     url('../fonts/Quicksand-Regular.woff2') format('woff2'),
-//     url('../fonts/Quicksand-Regular.woff') format('woff');
-// }
 
 // @font-face {
 //   font-family: 'Roboto-Regular';
