@@ -1,6 +1,6 @@
 // Цвета
 $default-color: #7b7b7b; //цвет по умолчанию
-$title-color: #29282d; //цвет заглавий
+$title-color: #191919; //цвет заглавий
 $accent-color: #243f4d; //акцентный цвет
 
 // Шрифты
@@ -22,4 +22,9 @@ $accent-color: #243f4d; //акцентный цвет
 %Rubik-400 {
 	font-family: 'Rubik-Regular', sans-serif;
 	font-weight: 400;
+}
+
+%DMSans-500 {
+	font-family: 'DMSans-Medium', sans-serif;
+	font-weight: 500;
 }

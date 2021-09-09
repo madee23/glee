@@ -22,3 +22,10 @@ body {
 .main {
 	flex-grow: 1;
 }
+
+.title {
+	font-size: 36px;
+	color: #191919;
+	@extend %DMSans-700;
+	margin-bottom: 40px;
+}
