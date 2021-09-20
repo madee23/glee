@@ -15,6 +15,8 @@
 		background-color: #fff;
 		padding-top: 233px;
 		padding-left: 30px;
+		box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+		z-index: 1;
 		&:nth-child(2) {
 			background-image: url('../images/blog/two.jpg');
 		}
