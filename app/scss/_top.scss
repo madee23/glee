@@ -1,0 +1,38 @@
+.breadcrumbs {
+	&__item {
+		@extend %Rubik-400;
+		font-size: 14px;
+		position: relative;
+		&::after {
+			content: '/';
+			position: absolute;
+			right: -12px;
+			top: 0;
+			opacity: 0.6;
+		}
+		&:last-child::after {
+			display: none;
+		}
+	}
+	&__link {
+		color: #22293360;
+	}
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+}
+.top {
+	background-color: #edf1f4;
+	text-align: center;
+	padding: 35px 0 33px;
+	&__title {
+		font-size: 36px;
+		@extend %Rubik-300;
+		color: #222933;
+		line-height: 24px;
+		margin-bottom: 11px;
+	}
+}
