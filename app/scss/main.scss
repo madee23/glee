@@ -1,103 +1,141 @@
 .main {
-	width: 100%;
-	height: 990px;
-	height: auto;
-	&__bottom {
+	&__inner {
 		display: flex;
-		justify-content: space-evenly;
-		align-items: stretch;
-		height: 170px;
-		width: 100%;
+		flex-direction: row;
 	}
-	&__bottom-img-inner {
+	&__content {
+	}
+	&__sidebar-logo {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 60px;
+	}
+	&__sidebar-logo-img {
+	}
+	&__sidebar-logo-title {
+		font-size: 24px;
+		color: #333333;
+	}
+	&__sidebar {
+		background-color: #f3f4f9;
+		min-height: 100vh;
+		width: 240px;
+		padding: 41px 0 0 41px;
+	}
+	&__sidebar-form-mnu {
+	}
+	&__sidebar-form-mnu-label {
+		display: inline-block;
+		stroke: black;
 		position: relative;
+		transition: all 0.3s ease-in-out;
+		margin-bottom: 44px;
+	}
+	&__sidebar-form-mnu-input {
+		@extend %checkbox-hidden;
+		&:checked + span.main__sidebar-form-mnu-item {
+			color: #34abe0;
+			stroke: #34abe0;
+		}
+		&:checked + span.main__sidebar-form-mnu-item {
+			&::before {
+				content: '';
+				position: absolute;
+				width: 6px;
+				height: 24px;
+				top: 0;
+				left: -42px;
+				background-color: #34abe0;
+				transition: all 0.3 ease-in-out;
+			}
+		}
+	}
+	&__sidebar-form-mnu-item {
+		font-size: 16px;
+		line-height: 0.8;
+		font-weight: bold;
+		display: flex;
+		gap: 15px;
+		align-items: center;
 		&::before {
 			content: '';
-			display: block;
-			width: 19px;
-			height: 19px;
-			border-radius: 50%;
-			background-color: #a3bbc8;
 			position: absolute;
-			right: -8px;
-			bottom: -6px;
-			opacity: 0.34;
+			width: 0px;
+			height: 24px;
+			top: 0;
+			left: -42px;
+			background-color: #34abe0;
+			transition: all 0.3s ease-in-out;
+		}
+		&:hover {
+			color: #34abe0;
+			fill: #34abe0;
+			stroke: #34abe0;
+			transition: all 0.3s ease-in-out;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 6px;
+				height: 24px;
+				top: 0;
+				left: -42px;
+				background-color: #34abe0;
+				transition: all 0.3s ease-in-out;
+			}
 		}
 	}
-	&__bottom-item {
-		background-color: #fef7f0;
-		flex: 1 1 auto;
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		border-right: 1px solid #e8e4df;
-		gap: 30px;
-		padding-top: 47px;
+	&__content {
 	}
-	&__bottom-text {
+	&__content-top {
+		padding: 40px 60px;
 	}
-	&__bottom-title {
-	}
-	&__bottom-inner {
-		width: 200px;
-	}
-	&__slider {
-		min-height: 720px;
-		padding-bottom: 45px;
-	}
-	&__slider-btn {
-		border: none;
-		padding: 24px 101px 24px 27px;
-		background-color: #a3bbc8;
-		color: #fff;
-		font-size: 15px;
-		line-height: 12px;
-		cursor: pointer;
+	&__content-form {
 		position: relative;
-		&::after {
-			content: '';
-			position: absolute;
-			right: 19px;
-			top: 50%;
-			transform: translate(0, -4px);
-			background-image: url('../images/slider/btn_arr.png');
-			width: 22px;
-			height: 10px;
+		// border: 1px solid #000;
+	}
+	&__content-form-btn {
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		cursor: pointer;
+		// transform: translateY(-50%);
+		svg {
+			stroke: #d6d6d6;
 		}
 	}
-	&__slider-img {
-		min-width: 755px;
-		height: auto;
+	&__content-form-search {
+		width: 1080px;
+		height: 52px;
+		border-radius: 50px;
+		border: 1px solid #33333350;
+		padding-left: 44px;
 	}
-	&__slider-item {
-		display: flex !important;
-		justify-content: space-between;
-		align-items: flex-start;
+	&__content-title {
+		color: #000;
+		margin-bottom: 30px;
 	}
-	&__slider-left {
+	&__content-grid {
+		background-color: #ececec;
+		width: 100%;
+		min-height: 300px;
+		padding: 40px 60px;
 	}
-	&__slider-right {
-	}
-	&__slider-text {
-		width: 360px;
-		font-size: 18px;
-		line-height: 30px;
-		@extend %Rubik-400;
-		margin-bottom: 45px;
-	}
-	&__slider-title {
-		@extend %Rubik-500;
-		margin-top: 125px;
-		margin-bottom: 46px;
-		font-size: 72px;
-		line-height: 70px;
-		color: #243f4d;
-	}
-	&__wrapper {
-		margin: 0 auto;
-		background-color: #fcd7b6;
-		padding: 100px 185px 0;
+	&__content-grid-item {
+		padding: 16px 20px;
+		width: 346px;
+		height: 161px;
+		// border: 1px solid #000;
+		background-image: url(../images/main/sidebar/bg_item.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		transition: all 0.3s ease;
+		&:hover {
+			background-image: url(../images/main/sidebar/bg_item-hover.svg);
+		}
 	}
 }
-
-@import 'slick-dots';

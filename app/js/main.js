@@ -1,25 +1,8 @@
-$(function () {
+function parallax(event) {
+	this.querySelectorAll('.layer').forEach(layer => {
+		let speed = layer.getAttribute('data-speed');
+		layer.style.transform = `translateX(${event.clientX * speed / 1000}px)`;
+	});
+}
 
-	// Слайдер
-	$('.main__slider').slick({
-		dots: true,
-		arrows: false,
-		// fade: true,
-		// autoplay: true,
-		// autoplaySpeed: 2000
-	})
-
-	// Фильтр
-	var containerEl1 = document.querySelector('[data-ref="container-1"]');
-	var containerEl2 = document.querySelector('[data-ref="container-2"]');
-
-	var config = {
-		controls: {
-			scope: 'local'
-		}
-	};
-
-	var mixer1 = mixitup(containerEl1, config);
-	var mixer2 = mixitup(containerEl2, config);
-
-});
+document.addEventListener('mousemove', parallax);
